@@ -1,0 +1,25 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# DOTA 1.5 dataset https://captain-whu.github.io/DOTA/index.html for object detection in aerial images by Wuhan University
+# Documentation: https://docs.ultralytics.com/datasets/pet_dataset_v1/
+# Example usage: yolo train model=yolov8n.pt data=pet_dataset_v1.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── pet_dataset_v1  ← downloads here (2GB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+#path: ../datasets/pet_dataset_v1 # dataset root dir
+train: /home/gilbert11/Downloads/ultralytics/ultralytics/cfg/pet_dataset_v1/images/train # train images (relative to 'path') 2791 images
+val: /home/gilbert11/Downloads/ultralytics/ultralytics/cfg/pet_dataset_v1/images/val # val images (relative to 'path') 358 images
+test: /home/gilbert11/Downloads/ultralytics/ultralytics/cfg/pet_dataset_v1/images/test # test images (optional) 337 images
+
+# Classes for pet_dataset_v1
+names:
+  0: P
+  1: O
+  2: S
+  3: C
+  4: Ot
+  5: T
+  6: Ch
+

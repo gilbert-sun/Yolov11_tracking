@@ -48,7 +48,7 @@ if __name__ == '__main__':
     # Step 4: Save and display
     normalized_img = cv2.convertScaleAbs(image_2d, alpha=(255.0 / 65535.0))
     #cv2.imwrite('W_{}_H_{}.png'.format(width,height), image_2d)
-    cv2.imwrite('W_{}_H_{}_CH_{}.png'.format(width,height,channel), image_2d)
+    cv2.imwrite(fout+'W_{}_H_{}_CH_{}.png'.format(width,height,channel), image_2d)
     #cv2.imwrite('output_padded_image.png', image_2d)
     cv2.imshow('Padded Image (8-bit)', image_2d)
     cv2.waitKey(0)

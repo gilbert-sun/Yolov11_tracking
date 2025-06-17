@@ -8,7 +8,7 @@ import argparse
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--video_folder', type=str, default='/home/k900/Downloads/60885.0_20250410_161050')
-    parser.add_argument('--result_folder', type=str, default="output_padded_image0.png")
+    parser.add_argument('--result_folder', type=str, default="out_padded_img")
     parser.add_argument('--width', type=int, default=8320)
     parser.add_argument('--channel', type=int, default=3)
     parser.add_argument('--data_type', type=str, default='uint8')
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     # Step 4: Save and display
     normalized_img = cv2.convertScaleAbs(image_2d, alpha=(255.0 / 65535.0))
     #cv2.imwrite('W_{}_H_{}.png'.format(width,height), image_2d)
-    cv2.imwrite(fout+'W_{}_H_{}_CH_{}.png'.format(width,height,channel), image_2d)
+    cv2.imwrite(fout+'_W_{}_H_{}_CH_{}.png'.format(width,height,channel), image_2d)
     #cv2.imwrite('output_padded_image.png', image_2d)
     cv2.imshow('Padded Image (8-bit)', image_2d)
     cv2.waitKey(0)

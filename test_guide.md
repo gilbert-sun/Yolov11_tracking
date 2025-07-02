@@ -1,7 +1,10 @@
 ## Create Virtual Environment and requirement.txt
 sudo apt-get install python3.9-venv
+
 python -m venv windturbine
+
 source windturbine/bin/activate
+
 pip3 freeze > requirements.txt
 
 ## labelimg / label format
